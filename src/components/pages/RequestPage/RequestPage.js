@@ -5,6 +5,7 @@ import MaterialTable, { MTableToolbar } from "material-table";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Grid, Paper, TextField, Button } from "@material-ui/core";
 import * as deptandcostActions from "./../../../actions/deptandcost.action";
+import * as staffActions from "./../../../actions/staff.action";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,12 +29,10 @@ const useStyles = makeStyles((theme) => ({
 export default (props) => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const deptandcostReducer = useSelector(
-    ({ deptandcostReducer }) => deptandcostReducer
-  );
+  const staffReducer = useSelector(({ staffReducer }) => staffReducer);
 
   useEffect(() => {
-    dispatch(deptandcostActions.getDeptAndCosts());
+    dispatch(staffActions.getStaff());
   }, []);
 
   // "ST_N6L3": "TEST      ",
@@ -217,7 +216,7 @@ export default (props) => {
         id="root_pr"
         title={`Staff list`}
         columns={columns}
-        data={deptandcostReducer.result ? deptandcostReducer.result : []}
+        data={staffReducer.result ? staffReducer.result : []}
         options={{
           // exportButton: true,
           // toolbar: false,

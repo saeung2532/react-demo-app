@@ -58,6 +58,7 @@ export const server = {
   CHECKTOKEN_URL: `authen_api/auth/checktoken`,
   COMPANY_URL: `authen_api/data/company`,
   WAREHOUSE_URL: `authen_api/data/warehouse`,
+  STAFF_URL: `authen_api/data/staff`,
 
   // Token
   TOKEN_KEY: `token`,
