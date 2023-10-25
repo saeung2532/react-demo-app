@@ -290,6 +290,19 @@ const MiniDrawer = (props) => {
 
           <ListItem
             component={NavLink}
+            to="/request"
+            button
+            key="request"
+            activeClassName={classes.isActive}
+          >
+            <ListItemIcon>
+              <BarChartIcon color={"primary"} />
+            </ListItemIcon>
+            <ListItemText primary="Request item" />
+          </ListItem>
+
+          <ListItem
+            component={NavLink}
             to="/findcostcenter"
             button
             key="findcostcenter"
