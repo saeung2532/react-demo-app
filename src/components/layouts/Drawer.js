@@ -298,7 +298,7 @@ const MiniDrawer = (props) => {
             <ListItemIcon>
               <BarChartIcon color={"primary"} />
             </ListItemIcon>
-            <ListItemText primary="Request item" />
+            <ListItemText primary="Request Item" />
           </ListItem>
 
           <ListItem
